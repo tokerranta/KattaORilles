@@ -21,4 +21,7 @@ gulp.task('watch', function () {
 gulp.task('test', function () {
     return gulp.src('./fooo')
             .pipe($.karma(config.karma.options))
+            .on('error', function (err) {
+                this.emit('end');
+            });
 });
