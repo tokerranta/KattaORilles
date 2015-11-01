@@ -1,0 +1,11 @@
+{
+  "name": "kattaorilles",
+  "version": "1.0.0",
+  "description": "web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo test"
+  },
+  "author": "markus rantanikunen",
+  "license": "ISC"
+}
