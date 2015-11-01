@@ -17,3 +17,8 @@ gulp.task('browser-sync', function () {
 gulp.task('watch', function () {
     return gulp.watch(config.watch.src, ['browser-sync']);
 });
+
+gulp.task('test', function () {
+    return gulp.src('./fooo')
+            .pipe($.karma(config.karma.options))
+});

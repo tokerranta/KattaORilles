@@ -1,6 +1,5 @@
 (function (){
-
-    var x = 0;
-    console.log(y);
+    'use strict';
+    angular.module('app', []);
 
 }());

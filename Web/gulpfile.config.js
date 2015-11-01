@@ -10,5 +10,11 @@ module.exports = {
     },
     watch: {
         src: ['**/app/**/*.js', 'index.html', '**/app/**/*.html', '**/app/**/*.css']
+    },
+    karma: {
+        options: {
+            configFile: './karmaconfig.js',
+            action: 'run'
+        }
     }
 };
