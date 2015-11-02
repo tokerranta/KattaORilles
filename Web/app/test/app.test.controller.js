@@ -2,12 +2,20 @@
     'use strict';
 
     angular.module('app')
-        .controller('TestController', TestController);
+        .controller('HomeController', HomeController);
 
-    //TestController.$inject = [''];
-
-    function TestController() {
+    function HomeController() {
         var vm = this;
+        vm.monkeys = [];
+        activate();
+
+        function activate() {
+            vm.monkeys = [
+                { name: 'foo' },
+                { name: 'bar' },
+                { name: 'baz' }
+            ];
+        }
 
     }
 

@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
-    config = require('./gulpfile.config.js');
+    config = require('./gulpfile.config.js'),
+    Karma = require('karma').Server;
 
 
 gulp.task('linting', function () {
@@ -18,10 +19,6 @@ gulp.task('watch', function () {
     return gulp.watch(config.watch.src, ['browser-sync']);
 });
 
-gulp.task('test', function () {
-    return gulp.src('./fooo')
-            .pipe($.karma(config.karma.options))
-            .on('error', function (err) {
-                this.emit('end');
-            });
+gulp.task('test', function (done) {
+    var karma = new Karma(config.karma.options, done).start();
 });

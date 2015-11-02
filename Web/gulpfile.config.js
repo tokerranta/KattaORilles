@@ -13,8 +13,7 @@ module.exports = {
     },
     karma: {
         options: {
-            configFile: './karmaconfig.js',
-            action: 'run'
+            configFile: __dirname + '/karmaconfig.js'
         }
     }
 };
