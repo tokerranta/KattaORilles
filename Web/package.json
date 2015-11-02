@@ -4,11 +4,13 @@
   "description": "web app",
   "main": "index.js",
   "scripts": {
-    "test": "echo test"
+    "test": "echo test",
+    "postinstall": "node node_modules/bower/bin/bower install"
   },
   "author": "markus rantanikunen",
   "license": "ISC",
   "devDependencies": {
+    "bower": "^1.6.5",
     "gulp": "^3.9.0",
     "gulp-jasmine": "^2.2.0",
     "gulp-jshint": "^1.12.0",
