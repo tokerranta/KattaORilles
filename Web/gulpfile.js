@@ -22,3 +22,24 @@ gulp.task('watch', function () {
 gulp.task('test', function (done) {
     var karma = new Karma(config.karma.options, done).start();
 });
+
+gulp.task('dist-js', function () {
+    return gulp.src(config.js.src)
+            .pipe($.concat('lib.min.js'))
+            .pipe($.uglify())
+            .pipe(gulp.dest(config.js.dest));
+});
+
+gulp.task('dist-html', function () {
+    return gulp.src(config.html.src)
+               .pipe(gulp.dest(config.html.dest));
+});
+
+gulp.task('dist-css', function () {
+    return gulp.src(config.css.src)
+                .pipe(gulp.dest(config.css.dest));
+});
+
+gulp.task('dist', ['dist-js', 'dist-html', 'dist-css'], function () {
+        
+});

@@ -1,6 +1,6 @@
 module.exports = {
     js: {
-        src: '**/app/**/*.js',
+        src: './app/**/*.js',
         dest: 'wwwroot/dist/js',
         linting: {
             options: {
@@ -15,5 +15,13 @@ module.exports = {
         options: {
             configFile: __dirname + '/karmaconfig.js'
         }
+    },
+    html: {
+        src: './index.html',
+        dest: 'wwwroot/',
+    },
+    css: {
+        src: './**/*.css',
+        dest: 'wwwroot/dist/css'
     }
 };
